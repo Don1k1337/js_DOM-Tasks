@@ -1,6 +1,6 @@
 function currDateTime() {
-  var d = new Date();
-  var listOfDays = [
+  let d = new Date();
+  let listOfDays = [
     'Monday',
     'Tuesday',
     'Wednesday',
@@ -8,14 +8,14 @@ function currDateTime() {
     'Friday',
     'Saturday',
   ];
-  var day = d.getDay();
+  let day = d.getDay();
   // var weekDay = 'Today is ' + ':' + ' ' + ' ' + listOfDays[day];
 
-  var hour = d.getHours();
-  var min = d.getMinutes();
-  var sec = d.getSeconds();
+  let hour = d.getHours();
+  let min = d.getMinutes();
+  let sec = d.getSeconds();
 
-  var prefix = hour >= 12 ? ' PM' : 'AM';
+  let prefix = hour >= 12 ? ' PM' : 'AM';
   hour = hour >= 12 ? hour - 12 : hour;
 
   if (hour === 0 && prefix === 'PM') {
@@ -54,9 +54,9 @@ function currDateTime() {
 }
 
 function reverseNum() {
-  var str = prompt('enter num');
+  let str = prompt('enter num');
   let reversed = '';
-  for (var i = str.length - 1; i >= 0; i--) {
+  for (let i = str.length - 1; i >= 0; i--) {
     reversed += str[i];
   }
   document.querySelector('.task__reversenum').innerHTML = reversed;
@@ -112,7 +112,7 @@ document.querySelector('.task__monthfinder').innerHTML =
 
 function upperCaseTester(str) {
   regexp = /^[A-Z]/;
-  var str = prompt('Input a string');
+  str = prompt('Input a string');
   if (regexp.test(str)) {
     document.querySelector('.task__uppercasetester').innerHTML =
       "String's first char is uppercase";
@@ -123,20 +123,19 @@ function upperCaseTester(str) {
 }
 
 function smileDrawer() {
-  var canvas = document.getElementById('myCanvas');
+  let canvas = document.getElementById('myCanvas');
   if (canvas.getContext) {
-    var smile = canvas.getContext('2d');
+    let smile = canvas.getContext('2d');
     smile.beginPath();
-    smile.arc(200, 200, 100, 0, Math.PI * 2, true); 
     smile.moveTo(275, 200);
     smile.arc(200, 200, 75, 0, Math.PI, false);
     smile.moveTo(150, 150);
-    smile.arc(170, 150, 20, 0, Math.PI * 2, true); 
-    smile.arc(230, 150, 20, 0, Math.PI * 2, true); 
+    smile.arc(170, 150, 20, 0, Math.PI * 2, true);
+    smile.arc(230, 150, 20, 0, Math.PI * 2, true);
     smile.stroke();
   }
 }
-document.querySelector('.task__smiledrawer').innerHTML = smileDrawer();
+document.querySelector('.task__smiledrawer').textContent = smileDrawer();
 
 function divContentPrinter() {
   console.log(
