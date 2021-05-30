@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neobis JS-Tasks#1</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body onload="draw();">
+    <div class="container">
+      <h1>Neobis JS-Tasks #1</h1>
+
+      <button class="accordion">
+        Write a JavaScript function to get the month name from a particular
+        date.
+        <br />
+        Test Data :
+        <br />
+        console.log(month_name(new Date("10/11/2009")));
+        <br />
+        console.log(month_name(new Date("11/13/2014")));
+        <br />
+        Output : "October" "November"
+      </button>
+      <div class="accordion-content">
+        <p class="task__monthfinder"></p>
+      </div>
+
+      <button class="accordion">
+        Write a JavaScript program to test the first character of a string is
+        uppercase or not
+      </button>
+      <div class="accordion-content">
+        <p class="task__uppercasetester">
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="upperCaseTester()"
+          >
+            Input & Check
+          </button>
+        </p>
+      </div>
+
+      <button class="accordion">
+        Write a JavaScript program to draw a smile
+      </button>
+
+      <div class="accordion-content">
+        <canvas id="myCanvas" width="300" height="500"></canvas>
+        <p class="task__smiledrawer"></p>
+      </div>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="index.html">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="secondIndex.html">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="thirdIndex.html">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="fourthIndex.html">4</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="fifthIndex.html">5</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <script src="js/accordionScriptFunction.js"></script>
+    <script src="js/solver.js"></script>
+  </body>
+</html>

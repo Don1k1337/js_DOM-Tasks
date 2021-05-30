@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neobis JS-Tasks#1</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Neobis JS-Tasks #1</h1>
+
+      <button class="accordion">
+        На странице есть следующая разметка:
+        <article>
+          <h3>What is Lorem Ipsum?</h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages.
+          </p>
+          <h3>Where does it come from?</h3>
+          <p>
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+            It has roots in a piece of classical Latin literature from 45 BC,
+            making it over 2000 years old. The first line of Lorem Ipsum, "Lorem
+            ipsum dolor sit amet..", comes from a line in section 1.10.32. from
+            "The Extremes of Good and Evil" by Cicero
+          </p>
+          <h3>Why do we use it?</h3>
+          <p>
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that it has a more-or-less normal
+            distribution of letters, as opposed to using 'Content here, content
+            here', making it look like readable English.
+          </p>
+        </article>
+        Вам необходимо с помощью JavaScript вставить после каждого тега "p"
+        <br />
+        тег "hr/>", для визуального отделения абзацев друг от друга.
+      </button>
+      <div class="accordion-content">
+        <p class="task__hrtagadder">
+          <button type="button" class="btn btn-primary" onclick="hrTagAdder()">
+            Add hr tag & change content
+          </button>
+        </p>
+      </div>
+
+      <button class="accordion">
+        Дана такая разметка:
+        <div id="cart-items">
+          <div class="item">Milk 1 l<span class="qty"> x 2</span></div>
+          <div class="item">Cola 1.5 l<span class="qty"> x 1</span></div>
+          <div class="item">Bread<span class="qty"> x 2</span></div>
+          <div class="item">Cheese<span class="qty"> x 1</span></div>
+          <div class="item">Chocolate bar<span class="qty"> x 3</span></div>
+        </div>
+        Необходимо с помощью JavaScript удалить элемент "Cola 1.5 l" и заменить
+        товар "Chocolate bar" на "Canned Fish", количеством 4 штуки.
+      </button>
+      <div class="accordion-content">
+        <p class="task__contentchanger">
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="contentChanger()"
+          >
+            Generate new content
+          </button>
+        </p>
+      </div>
+
+      <button class="accordion">
+        Напишите программу для создания списка задач, которые будет вводить
+        пользователь:
+        <br />
+        Для каждого пункта:
+        <br />
+        Запрашивайте содержимое пункта у пользователя с помощью prompt.
+        <br />
+        Создавайте пункт и добавляйте его к UL.
+        <br />
+        Процесс прерывается, когда пользователь нажимает "Отмена" или вводит
+        пустую строку.
+      </button>
+      <div class="accordion-content">
+        <p id="tasks-create" class="task__taskscreator">
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="tasksCreator()"
+          >
+            Create tasks & Open dropdown again
+          </button>
+        </p>
+      </div>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item">
+            <a class="page-link" href="index.html">1</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="secondIndex.html">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="thirdIndex.html">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="fourthIndex.html">4</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="fifthIndex.html">5</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <script src="js/accordionScriptFunction.js"></script>
+    <script src="js/solver.js"></script>
+  </body>
+</html>
